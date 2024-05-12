@@ -1,0 +1,425 @@
+/*Ogólne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Style dla menu nawigacyjnego */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.container {
+    padding-top: 40px;
+}
+/*Autoryzacja*/
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+.login-form {
+    margin-top: 20px;
+}
+.login-container h1 {
+    text-align: center;
+}
+.register-link {
+    text-align: center; 
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.btn-center {
+    display: block; 
+    margin: 0 auto; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+}
+.btn-center:hover {
+    background-color: #0056b3;
+}
+.login-container p {
+    margin-top: 20px;
+}
+.login-container p a {
+    color: #007bff;
+    text-decoration: none;
+}
+.login-container p a:hover {
+    text-decoration: underline;
+}
+.register-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+.register-container h1 {
+    text-align: center;
+}
+.register-form {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 96%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-center {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+}
+.btn-center:hover {
+    background-color: #0056b3;
+}
+.login-link {
+    text-align: center; 
+}
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.profile-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.profile-container h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.edit-profile {
+    margin-top: 20px;
+}
+.edit-profile form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form-group-profile {
+    margin-bottom: 20px;
+}
+.form-group-profile label {
+    display: block;
+    font-weight: bold;
+}
+.form-group-profile input[type="text"],
+.form-group-profile input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+.form-group-profile{
+    margin-bottom: 15px;
+}
+.profile-btn {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+.profile-btn:hover {
+    background-color: #177c2f;
+}
+/* Dodaj przepis*/
+.add-recipe-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.add-recipe-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-group-recipe {
+    margin-bottom: 20px;
+}
+.form-group-recipe label {
+    display: block;
+    font-weight: bold;
+}
+.form-group-recipe input[type="text"],
+.form-group-recipe textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.recipe-btn {
+    display: block;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+}
+.recipe-btn:hover {
+    background-color: #0056b3;
+}
+/*edit*/
+.edit-recipe-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.edit-recipe-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-group-edit {
+    margin-bottom: 20px;
+}
+.form-group-edit label {
+    display: block;
+    font-weight: bold;
+}
+.form-group-edit input[type="text"],
+.form-group-edit textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.edit-btn {
+    display: block;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+}
+.edit-btn:hover {
+    background-color: #177c2f;
+}
+/*comment*/
+.add-comment-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.add-comment-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.add-comment-container h2 {
+    margin-bottom: 10px;
+}
+.add-comment-container p {
+    margin-bottom: 10px;
+}
+.form-group-comment {
+    margin-bottom: 20px;
+}
+.form-group-comment label {
+    display: block;
+    font-weight: bold;
+}
+.form-group-comment textarea{
+    width: 85%;
+}
+.form-group-comment select,
+.form-group-comment textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.comment-btn {
+    display: block;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+}
+.comment-btn:hover {
+    background-color: #0056b3;
+}
+/*user*/
+.user-recipes-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+.user-recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color:#f5fffd;
+}
+.user{
+    text-align: center;
+}
+.user-recipe-card h2 {
+    margin-bottom: 10px;
+} 
+.user-recipe-card p {
+    margin-bottom: 10px;
+} 
+.user-recipe-actions {
+    margin-top: 10px;
+}
+.user-recipe-actions .btn {
+    margin-right: 10px;
+}  
+.comment {
+    border: 1px solid #479bb3;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color:#ffffff;
+}
+.comment p {
+    margin-bottom: 5px;
+}
+.save-btn {
+    color: #fff;
+    background-color: #28a745;
+    font-size: 20px;
+    margin-right: 13px;
+}
+.cancel-btn {
+    color: #fff;
+    background-color: #dc3545;
+    font-size: 20px;
+    margin-right: 13px;
+}
+
+.all-recipes-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+.all{
+    text-align: center; 
+}
+.all-recipe-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e7fde6;
+} 
+.all-recipe-item h2 {
+    margin-bottom: 10px;
+}
+.all-recipe-details {
+    margin-top: 10px;
+}
+.all-btn {
+    background-color: #c3d103;
+    color: #fff;
+} 
+.full {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b9b9b9;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+} 
+.full span {
+    background: #fff;
+    padding: 0 10px;
+}
+  

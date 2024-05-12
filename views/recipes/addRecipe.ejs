@@ -1,0 +1,24 @@
+<%- include('../layouts/mainLayout', { title: 'Dodaj przepis', content: '' }) %>
+
+<div class="add-recipe-container">
+  <h1>Dodaj przepis</h1>
+  <form action="/addRecipe" method="post">
+    <div class="form-group-recipe">
+      <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title">
+    </div>
+
+    <div class="form-group-recipe">
+      <label for="ingredients">Składniki:</label>
+      <textarea id="ingredients" name="ingredients"></textarea>
+    </div>
+
+    <div class="form-group-recipe">
+      <label for="instructions">Instrukcje:</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+
+    <button type="submit" class="recipe-btn">Dodaj przepis</button>
+  </form>
+</div>
+

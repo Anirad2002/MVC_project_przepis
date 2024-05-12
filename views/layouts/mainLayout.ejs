@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/">Strona główna</a>
+      <% if (isAuthenticated) { %>
+        <a href="/userRecipes">Przepisy</a>
+        <a href="/addRecipe">Dodaj przepis</a>
+        <a href="/users/profile">Profil</a>
+        <a href="/auth/logout">Wyjście</a>
+      <% } else { %>
+        <a href="/auth/login">Zaloguj się</a>
+        <a href="/auth/register">Zarejestruj się</a>
+      <% } %>
+    </div>
+  </nav>  
+  <div class="container">
+    <%= content %>
+  </div>
+</body>
+</html>

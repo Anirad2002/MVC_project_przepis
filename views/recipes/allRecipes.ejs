@@ -1,0 +1,42 @@
+<%- include('../layouts/mainLayout', { title: 'Wszystkie przepisy', content: '' }) %>
+
+<div class="all-recipes-container">
+  <h1 class="all">Wszystkie przepisy</h1>
+  <div>
+    <% recipes.forEach(recipe => { %>
+      <div class="all-recipe-item">
+        <h2><%= recipe.title %></h2>
+        <div class="recipe-details">
+          <p><strong>Składniki:</strong></p>
+          <ul>
+            <% recipe.ingredients.split('\n').forEach(ingredient => { %>
+              <li><%= ingredient.trim() %></li>
+            <% }); %>
+          </ul>
+          <p><strong>Instrukcje:</strong></p>
+          <ul>
+            <% recipe.instructions.split('\n').forEach(instruction => { %>
+              <li><%= instruction.trim() %></li>
+            <% }); %>
+          </ul>
+          
+          <% if (isAuthenticated) { %>
+            <a href="/recipes/<%= recipe._id %>/addComment" class="all-btn">Komentarz</a>
+          <% } %>
+          
+          <% if (recipe.comments.length > 0) { %>
+            <h3>Komentarz:</h3>
+            <div class="comment">
+            <% recipe.comments.forEach(comment => { %>
+                <p><strong>Użytkownik:</strong> <%= comment.user.name %></p>
+                <p><strong>Ocena:</strong> <%= comment.rating %></p>
+                <p><strong>Komentarz:</strong> <%= comment.content %></p>
+                <p class="full"></p>
+            <% }); %>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>

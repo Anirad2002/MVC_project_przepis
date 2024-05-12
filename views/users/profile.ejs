@@ -1,0 +1,22 @@
+
+<%- include('../layouts/mainLayout', { title: 'Profil', content: '' }) %>
+
+<div class="profile-container">
+  <h1>Profil użytkownika</h1>
+  <h3>Imię: <%= user.name %></h3>
+  <h3>E-mail: <%= user.email %></h3>
+  <div class="edit-profile">
+    <h2>Edytuj swój profil</h2>
+    <form action="/users/profile/edit" method="POST">
+      <div class="form-group-profile">
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" value="<%= user.name %>" required>
+      </div>
+      <div class="form-group-profile">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" required>
+      </div>
+      <button type="submit" class="profile-btn">Zapisz zmiany</button>
+    </form>
+  </div>
+</div>

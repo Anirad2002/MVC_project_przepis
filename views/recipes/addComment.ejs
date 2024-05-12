@@ -1,0 +1,40 @@
+<%- include('../layouts/mainLayout', { title: 'Dodaj komentarz', content: '' }) %>
+
+<div class="add-comment-container">
+  <h1>Dodaj komentarz</h1>
+
+  <h2>Przepis: <%= recipe.title %></h2>
+  <p><strong>Składniki:</strong></p>
+    <ul>
+      <% recipe.ingredients.split('\n').forEach(ingredient => { %>
+        <li><%= ingredient.trim() %></li>
+      <% }); %>
+    </ul>
+  <p><strong>Instrukcje:</strong></p>
+    <ul>
+      <% recipe.instructions.split('\n').forEach(instruction => { %>
+        <li><%= instruction.trim() %></li>
+      <% }); %>
+    </ul>
+
+  <form action="/recipes/<%= recipe._id %>/addComment" method="POST">
+    <div class="form-group-comment">
+      <label for="rating">Ocena:</label>
+      <select id="rating" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group-comment">
+      <label for="content">Komentarz:</label><br>
+      <textarea id="content" name="content"></textarea>
+    </div>
+
+    <button type="submit" class="comment-btn">Zapisz</button>
+  </form>
+</div>
+

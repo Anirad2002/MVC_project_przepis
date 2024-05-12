@@ -1,0 +1,23 @@
+<%- include('../layouts/mainLayout', { title: 'Edycja przepisu', content: '' }) %>
+
+<div class="edit-recipe-container">
+  <h1>Edycja przepisu</h1>
+  <form action="/userRecipes/<%= recipe._id %>/editRecipe" method="post">
+    <div class="form-group-edit">
+      <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title" value="<%= recipe.title %>">
+    </div>
+
+    <div class="form-group-edit">
+      <label for="ingredients">Składniki:</label>
+      <textarea id="ingredients" name="ingredients"><%= recipe.ingredients %></textarea>
+    </div>
+
+    <div class="form-group-edit">
+      <label for="instructions">Instrukcje:</label>
+      <textarea id="instructions" name="instructions"><%= recipe.instructions %></textarea>
+    </div>
+
+    <button type="submit" class="edit-btn">Zapisz zmiany</button>
+  </form>
+</div>
