@@ -13,9 +13,10 @@ Użytkownicy będą mieli możliwość edycji i usuwania przepisów, które doda
 Każdy użytkownik będzie mógł dodać komentarz i ocenę do przepisu. Dzięki temu inni użytkownicy będą mogli dowiedzieć się, jakie są opinie na temat danego przepisu oraz jak smakował innym osobom.
 ## 7. Użyte technologie 
 Projekt będzie wykorzystywał różne technologie, język programowania do backendu (Node.js z Express), system zarządzania bazą danych (MongoDB).
-  Instalacja i uruchomienie aplikacji:
-- Instalacja Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64)
-- Krok 1.
+### Instalacja i uruchomienie aplikacji:
+### 7.1 Instalacja Apache24
+- Krok 1. Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64)
 - Krok 2.
-- Instalacja MongoDB https://www.mongodb.com/try/download/community 
-
+### 7.2 Instalacja MongoDB
+- MongoDB https://www.mongodb.com/try/download/community 
+### 7.3 Uruchomienie aplikacji
