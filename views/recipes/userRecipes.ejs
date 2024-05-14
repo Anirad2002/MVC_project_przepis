@@ -27,7 +27,18 @@
       <% if (typeof recipe.comments !== 'undefined' && recipe.comments.length > 0) { %>
         <% recipe.comments.forEach(comment => { %>
             <p><strong>Użytkownik:</strong> <%= comment.user.name %></p>
-            <p><strong>Ocena:</strong> <%= comment.rating %></p>
+            <!--<p><strong>Ocena:</strong> <%= comment.rating %></p>-->
+            <% 
+                    const rating = comment.rating;
+                    const maxRating = 5;
+                    for (let i = 1; i <= maxRating; i++) {
+                      if (i <= rating) {
+                        %> <span class="star">★</span> <% 
+                      } else {
+                        %> <span class="star">☆</span> <% 
+                      }
+                    }
+                  %>
             <p><strong>Komentarz:</strong> <%= comment.content %></p>
             <p class="full"></p>
         <% }); %>
