@@ -13,3 +13,5 @@ Użytkownicy będą mieli możliwość edycji i usuwania przepisów, które doda
 Każdy użytkownik będzie mógł dodać komentarz i ocenę do przepisu. Dzięki temu inni użytkownicy będą mogli dowiedzieć się, jakie są opinie na temat danego przepisu oraz jak smakował innym osobom.
 ## 7. Użyte technologie 
 Projekt będzie wykorzystywał różne technologie, język programowania do backendu (Node.js z Express), system zarządzania bazą danych (MongoDB).
+- Instalacja MongoDB https://www.mongodb.com/try/download/community
+
