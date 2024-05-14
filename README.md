@@ -14,9 +14,16 @@ Każdy użytkownik będzie mógł dodać komentarz i ocenę do przepisu. Dzięki
 ## 7. Użyte technologie 
 Projekt będzie wykorzystywał różne technologie, język programowania do backendu (Node.js z Express), system zarządzania bazą danych (MongoDB).
 ### Instalacja i uruchomienie aplikacji:
-### 7.1 Instalacja Apache24
-- Krok 1. Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64)
-- Krok 2.
+### 7.1 Instalacja Apache24 dla Windows 10 i 11
+- Krok 1. Pobieranie Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64) i wypakuj jego folder Apache24 do katalogu głównego dysku C:.
+- Krok 2. Otwórz wiersz poleceń cmd (nie PowerShell) i uruchom Apache za pomocą:
+```bash
+cd C:\Apache24\bin
+```
+```bash
+httpd
+```
+- Krok 3.
 ### 7.2 Instalacja MongoDB
 - MongoDB https://www.mongodb.com/try/download/community 
 ### 7.3 Uruchomienie aplikacji
