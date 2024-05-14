@@ -23,7 +23,20 @@ cd C:\Apache24\bin
 ```bash
 httpd
 ```
-- Krok 3.
+- Krok 3. C:\Apache24\htdocs to główny folder zawartości serwera WWW. Przenosić `MVC_project_przepis` do katalogu `C:\Apache24\htdocs`
 ### 7.2 Instalacja MongoDB
-- MongoDB https://www.mongodb.com/try/download/community 
+- Krok 1. Pobieranie MongoDB https://www.mongodb.com/try/download/community i go zainstaluj.
+- Krok 2. W `New Connection` do `URI` Wpisz ścieżkę:
+```bash
+mongodb://localhost/MVC_project_przepis
+```
 ### 7.3 Uruchomienie aplikacji
+Aby uruchomić aplikację, należy zainstalować dodatkowe paczki:
+```bash
+npm install express ejs body-parser express-session bcryptjs mongoose path
+```
+Po zainstalowaniu paczek, uruchom aplikację za pomocą polecenia:
+```bash
+node app.js
+```
+Aplikacja będzie dostępna pod adresem http://localhost:3000 
