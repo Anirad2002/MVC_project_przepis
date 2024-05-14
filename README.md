@@ -16,7 +16,7 @@ Projekt będzie wykorzystywał różne technologie, język programowania do back
 ### Instalacja i uruchomienie aplikacji:
 ### 7.1 Instalacja Apache24 dla Windows 10 i 11
 - Krok 1. Pobieranie Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64) i wypakuj jego folder Apache24 do katalogu głównego dysku C:
-- Krok 2. Otwórz wiersz poleceń cmd (nie PowerShell) i uruchom Apache za pomocą:
+- Krok 2. Otwórz wiersz poleceń `cmd` (nie PowerShell) i uruchom Apache za pomocą:
 ```bash
 cd C:\Apache24\bin
 ```
