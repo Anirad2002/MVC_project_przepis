@@ -422,4 +422,9 @@ body {
     background: #fff;
     padding: 0 10px;
 }
+.star {
+    font-size: 20px; 
+    color: orange; 
+    margin-right: 2px;
+}
   
