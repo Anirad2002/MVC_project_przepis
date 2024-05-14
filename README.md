@@ -15,7 +15,7 @@ Każdy użytkownik będzie mógł dodać komentarz i ocenę do przepisu. Dzięki
 Projekt będzie wykorzystywał różne technologie, język programowania do backendu (Node.js z Express), system zarządzania bazą danych (MongoDB).
 ### Instalacja i uruchomienie aplikacji:
 ### 7.1 Instalacja Apache24 dla Windows 10 i 11
-- Krok 1. Pobieranie Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64) i wypakuj jego folder Apache24 do katalogu głównego dysku C:.
+- Krok 1. Pobieranie Apache24 https://www.apachelounge.com/download/ (Apache 2.4.59-240404 Win64) i wypakuj jego folder Apache24 do katalogu głównego dysku C:
 - Krok 2. Otwórz wiersz poleceń cmd (nie PowerShell) i uruchom Apache za pomocą:
 ```bash
 cd C:\Apache24\bin
@@ -23,7 +23,7 @@ cd C:\Apache24\bin
 ```bash
 httpd
 ```
-- Krok 3. C:\Apache24\htdocs to główny folder zawartości serwera WWW. Przenosić `MVC_project_przepis` do katalogu `C:\Apache24\htdocs`
+- Krok 3. C:\Apache24\htdocs to główny folder zawartości serwera www. Przenosić `MVC_project_przepis` do katalogu `C:\Apache24\htdocs`
 ### 7.2 Instalacja MongoDB
 - Krok 1. Pobieranie MongoDB https://www.mongodb.com/try/download/community i go zainstaluj.
 - Krok 2. W `New Connection` do `URI` wpisz ścieżkę:
