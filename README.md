@@ -23,14 +23,31 @@ cd C:\Apache24\bin
 ```bash
 httpd
 ```
+### 7.2 Instalacja Apache2 dla Linux
+- Krok 1. Zainstaluj Apache2 za pomocą menedżera pakietów. Na przykład dla `Ubuntu` lub `Debiana` można użyć polecenia:
+```sql
+sudo apt update
+sudo apt install apache2
+```
+- Krok 2. Upewnij się, że Apache2 jest uruchomiony. Otwórz przeglądarkę internetową i przejdź do http://localhost. Jeśli wszystko jest poprawnie skonfigurowane, zobaczysz stronę startową Apache2.
 - Krok 3. C:\Apache24\htdocs to główny folder zawartości serwera www. Przenosić `MVC_project_przepis` do katalogu `C:\Apache24\htdocs`
-### 7.2 Instalacja MongoDB
+### 7.3 Instalacja MongoDB dla Windows
 - Krok 1. Pobieranie MongoDB https://www.mongodb.com/try/download/community i zainstaluj go.
 - Krok 2. W `New Connection` do `URI` wpisz ścieżkę:
 ```bash
 mongodb://localhost/MVC_project_przepis
 ```
-### 7.3 Uruchomienie aplikacji
+### 7.3 Instalacja MongoDB dla Linux
+- Krok 1. Zainstaluj MongoDB. Aby to zrobić, możesz skorzystać z oficjalnej dokumentacji MongoDB lub wykonać następujące kroki:
+```sql
+sudo apt update
+sudo apt install -y mongodb
+```
+- Krok 2. Po instalacji uruchom usługę MongoDB:
+```sql
+sudo systemctl start mongodb
+```
+### 7.5 Uruchomienie aplikacji
 Aby uruchomić aplikację, należy zainstalować dodatkowe paczki:
 ```bash
 npm install express ejs body-parser express-session bcryptjs mongoose path
