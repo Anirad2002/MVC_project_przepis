@@ -2,7 +2,7 @@
 
 <div class="add-recipe-container">
   <h1>Dodaj przepis</h1>
-  <form action="/addRecipe" method="post">
+  <form id="addRecipeForm" action="/addRecipe" method="post">
     <div class="form-group-recipe">
       <label for="title">Tytuł:</label>
       <input type="text" id="title" name="title">
@@ -22,3 +22,15 @@
   </form>
 </div>
 
+<script>
+  document.getElementById('addRecipeForm').addEventListener('submit', function(event) {
+    const title = document.getElementById('title').value.trim();
+    const ingredients = document.getElementById('ingredients').value.trim();
+    const instructions = document.getElementById('instructions').value.trim();
+
+    if (!title || !ingredients || !instructions) {
+      event.preventDefault();
+      alert('Proszę wypełnić wszystkie pola.');
+    }
+  });
+</script>
