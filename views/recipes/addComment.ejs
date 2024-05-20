@@ -17,7 +17,7 @@
       <% }); %>
     </ul>
 
-  <form action="/recipes/<%= recipe._id %>/addComment" method="POST">
+  <form id="addCommentForm" action="/recipes/<%= recipe._id %>/addComment" method="POST">
     <div class="form-group-comment">
       <label for="rating">Ocena:</label>
       <select id="rating" name="rating">
@@ -38,3 +38,14 @@
   </form>
 </div>
 
+<script>
+  document.getElementById('addCommentForm').addEventListener('submit', function(event) {
+    const rating = document.getElementById('rating').value.trim();
+    const content = document.getElementById('content').value.trim();
+
+    if (!rating || !content) {
+      event.preventDefault();
+      alert('Proszę wypełnić wszystkie pola.');
+    }
+  });
+</script>
