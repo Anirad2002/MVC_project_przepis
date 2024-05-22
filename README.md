@@ -25,13 +25,14 @@ cd C:\Apache24\bin
 httpd
 ```
 - Krok 3. C:\Apache24\htdocs to główny folder zawartości serwera www. Przenosić `MVC_project_przepis` do katalogu `C:\Apache24\htdocs`
-### 7.2.1 Instalacja MongoDB
+### 7.1.1 Instalacja MongoDB
 - Krok 1. Pobieranie MongoDB https://www.mongodb.com/try/download/community i zainstaluj go.
 - Krok 2. W `New Connection` do `URI` wpisz ścieżkę:
 ```bash
 mongodb://localhost/MVC_project_przepis
 ```
 ### 7.2 Instalacja dla Linux
+Przed zainstalowaniem projektu musisz mieć zainstalowany `Apache` i `nodejs` z `npm`
 ### 7.2.1 Instalacja Apache2
 - Krok 1. Zainstaluj Apache2 za pomocą menedżera pakietów. Na przykład dla `Ubuntu` lub `Debiana` można użyć polecenia:
 ```sql
