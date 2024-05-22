@@ -2,20 +2,46 @@
 
 <div class="login-container">
   <h1>Autoryzacja</h1>
-
+  <div id="error-message" class="alert alert-danger" role="alert" style="display: none;"></div>
   <form action="/auth/login" method="POST" class="login-form">
     <div class="form-group">
       <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-\]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
     </div>
-
     <div class="form-group">
       <label for="password">Hasło:</label>
       <input type="password" id="password" name="password" required>
     </div>
-
-    <button type="submit" class="btn-center">Zaloguj się</button>
+    <button type="button" class="btn-center" id="login-button">Zaloguj się</button>
   </form>
-
   <p class="register-link">Nie masz jeszcze konta? <a href="/auth/register">Zarejestruj się</a></p>
+  <script>
+    document.getElementById('login-button').addEventListener('click', async () => {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorMessageElement = document.getElementById('error-message');
+
+      try {
+        const response = await fetch('/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          errorMessageElement.textContent = errorData.error;
+          errorMessageElement.style.display = 'block';
+        } else {
+          window.location.href = '/';
+        }
+      } catch (error) {
+        console.error(error);
+        errorMessageElement.textContent = 'Wystąpił błąd. Spróbuj ponownie.';
+        errorMessageElement.style.display = 'block';
+      }
+    });
+  </script>
 </div>
