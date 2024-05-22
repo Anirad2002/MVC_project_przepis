@@ -33,24 +33,9 @@ mongodb://localhost/MVC_project_przepis
 ```
 ## 7.2 Instalacja dla Linux
 Przed zainstalowaniem projektu musisz mieć zainstalowany `Apache` i `nodejs` z `npm`
-### 7.2.1 Instalacja Apache2
-- Krok 1. Zainstaluj Apache2 za pomocą menedżera pakietów. Na przykład dla `Ubuntu` lub `Debiana` można użyć polecenia:
-```sql
-sudo apt update
-sudo apt install apache2
-```
-- Krok 2. Upewnij się, że Apache2 jest uruchomiony. Otwórz przeglądarkę internetową i przejdź do http://localhost. Jeśli wszystko jest poprawnie skonfigurowane, zobaczysz stronę startową Apache2.
-### 7.2.2 Instalacja MongoDB
-- Krok 1. Zainstaluj MongoDB. Aby to zrobić, możesz skorzystać z oficjalnej dokumentacji MongoDB lub wykonać następujące kroki:
-```sql
-sudo apt update
-sudo apt install -y mongodb
-```
-- Krok 2. Po instalacji uruchom usługę MongoDB:
-```sql
-sudo systemctl start mongodb
-```
-### 7.3 Uruchomienie aplikacji
+### 7.2.1 Instalacja MongoDB
+Opis instalacji `MongoDB`, zobacz instrukcje na stronie https://www.mongodb.com/docs/manual/tutorial/, musisz wybrać swoją kompilację Linuksa
+## 7.3 Uruchomienie aplikacji
 Aby uruchomić aplikację, należy zainstalować dodatkowe paczki:
 ```bash
 npm install express ejs body-parser express-session bcryptjs mongoose path
