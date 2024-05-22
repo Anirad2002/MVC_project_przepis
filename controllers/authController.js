@@ -28,28 +28,32 @@ const authController = {
   loginUser: async (req, res) => {
     try {
       const { email, password } = req.body;
-      let user = await User.findOne({ email });
+      const user = await User.findOne({ email });
+  
       if (!user) {
-        return res.status(400).send('Użytkownik o tym adresie e-mail już istnieje');
+        return res.status(400).json({ error: 'Użytkownik o tym adresie e-mail nie istnieje.' });
       }
+  
       const isPasswordValid = password === user.password;
+  
       if (!isPasswordValid) {
-        return res.status(401).send('Nieprawidłowe hasło');
+        return res.status(400).json({ error: 'Nieprawidłowe hasło.' });
       }
+  
       req.session.isAuthenticated = true;
       req.session.user = {
         _id: user._id,
         email: user.email,
         name: user.name
       };
-      req.session.user = user;
-      res.redirect('/');
+  
+      res.json({ success: true });
     } catch (err) {
       console.error(err);
-      res.status(500).send('Błąd serwera');
+      res.status(500).json({ error: 'Błąd serwera.' });
     }
   },
-  
+
   logoutUser: (req, res) => {
     req.session.isAuthenticated = false;
     req.session.destroy();
