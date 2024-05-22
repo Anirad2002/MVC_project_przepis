@@ -35,6 +35,8 @@ mongodb://localhost/MVC_project_przepis
 Przed zainstalowaniem projektu musisz mieć zainstalowany `Apache` i `nodejs` z `npm`
 ### 7.2.1 Instalacja MongoDB
 Opis instalacji `MongoDB`, zobacz instrukcje na stronie https://www.mongodb.com/docs/manual/tutorial/, musisz wybrać swoją kompilację Linuksa
+### 7.2.2 Instalacja projekt MVC_project_przepis
+Prześlij projekt `MVC_project_przepis` do katalogu używanego przez `Apache` do `obsługi hostów`
 ## 7.3 Uruchomienie aplikacji
 Aby uruchomić aplikację, należy zainstalować dodatkowe paczki:
 ```bash
